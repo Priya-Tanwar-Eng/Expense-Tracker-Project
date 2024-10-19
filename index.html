@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+
+      <form id="expense-form">
+        <div>
+          <label for="name">Expense Name:</label>
+          <input type="text" id="name" placeholder="Expense Name..." required />
+        </div>
+
+        <div>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" placeholder="Amount..." required />
+        </div>
+
+        <div>
+          <label for="category">Category:</label>
+          <select name="category" id="category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <button id="add" type="submit">Add Expense</button>
+        <button type="button" id="reset-btn">Reset Expenses</button>
+      </form>
+
+      <h2>Expenses</h2>
+      <div class="main"></div>
+
+      <template id="template">
+        <ul id="expense-list">
+          <li>
+            <p class="add-groceries"><span>Groceries</span></p>
+            <p class="add-date"><span>2024-10-18</span></p>
+            <p class="add-category"><span>Food</span></p>
+            <p class="add-amount"><span>₹50</span></p>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </li>
+        </ul>
+      </template>
+
+      <div id="total-expenses">
+        <h2>Total Expenses: ₹<span id="total-amount">0.00</span></h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh; 
+    width: 100vw;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+form {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select,
+button {
+    width: 95%;
+    height: 2.4rem;
+    margin: 0.4rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0.3rem;
+    padding-left: 10px;
+}
+
+label{
+    margin-left: 0.6rem;
+    font-weight: bold;
+}
+
+#add {
+    background-color: rgb(40, 167, 69);
+    color: #fff;
+    cursor: pointer;
+}
+
+#reset-btn {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#expense-list {
+    margin: 2rem;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+span {
+    margin-left: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: rgb(40, 167, 69);
+    color: #fff;
+    cursor: pointer;
+    height: 2rem;
+    width: 3.4rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    span {
+        margin-left: 0;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 48%;
+        margin-top: 0.5rem;
+    }
+
+    #expense-list {
+        margin: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%; 
+    }
+
+    li {
+        padding: 0.8rem;
+    }
+}
